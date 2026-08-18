@@ -63,3 +63,13 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
+
+## Auto-merge (ON — decided 2026-08-19)
+
+Full rule: `~/.claude/CLAUDE.md` § Auto-merge — repo cá nhân. Repo-specific parts only here.
+
+- **No CI in this repo.** There is no GitHub Actions workflow, so there is no check to wait for —
+  which means the reviewer is whatever ran locally before the push. Say what ran, or do not merge.
+- **Method: `merge` commit.** No squash.
+- **Stop for human review** if the PR touches any credential file. Everything here is guidance text;
+  a change that alters *behaviour rules* rather than wording deserves a read before it lands.
